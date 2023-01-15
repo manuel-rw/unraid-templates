@@ -22,8 +22,8 @@ https://github.com/manuel-rw/jellyfin-discord-music-bot/wiki</Overview>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1673820796</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>Like this work? Let me know and donate me a coffee</DonateText>
+  <DonateLink>https://ko-fi.com/manicraft1001</DonateLink>
   <Requires/>
   <Config Name="Host Port 1" Target="3000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3080</Config>
   <Config Name="DISCORD_CLIENT_TOKEN" Target="DISCORD_CLIENT_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
