@@ -15,7 +15,7 @@ Supports Discord commands and easy configuration with environment variables.&#xD
 To set up your own instance, please follow the guide:&#xD;
 https://github.com/manuel-rw/jellyfin-discord-music-bot/wiki</Overview>
   <Category>Tools: MediaApp:Music Network:Web Status:Stable</Category>
-  <WebUI>http://[IP]:3080</WebUI>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/manuel-rw/jellyfin-discord-music-bot/master/images/unraid-icon.png</Icon>
   <ExtraParams/>
