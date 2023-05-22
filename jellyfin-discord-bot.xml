@@ -22,12 +22,15 @@ https://github.com/manuel-rw/jellyfin-discord-music-bot/wiki</Overview>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1673820796</DateInstalled>
-  <DonateText>Like this work? Let me know and donate me a coffee</DonateText>
+  <DonateText>Like this project? Please consider to donate:</DonateText>
   <DonateLink>https://ko-fi.com/manicraft1001</DonateLink>
   <Requires/>
-  <Config Name="Host Port 1" Target="3000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3080</Config>
-  <Config Name="DISCORD_CLIENT_TOKEN" Target="DISCORD_CLIENT_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="JELLYFIN_SERVER_ADDRESS" Target="JELLYFIN_SERVER_ADDRESS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="JELLYFIN_AUTHENTICATION_USERNAME" Target="JELLYFIN_AUTHENTICATION_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="JELLYFIN_AUTHENTICATION_PASSWORD" Target="JELLYFIN_AUTHENTICATION_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Host Port 1" Target="3000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="DISCORD_CLIENT_TOKEN" Target="DISCORD_CLIENT_TOKEN" Default="" Mode="" Description="The bot secret token, that can be obtained from the Discord developer portal. Use the guide for exact instructions." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="JELLYFIN_SERVER_ADDRESS" Target="JELLYFIN_SERVER_ADDRESS" Default="" Mode="" Description="The Jellyfin server to connect to. Do not end with " Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="JELLYFIN_AUTHENTICATION_USERNAME" Target="JELLYFIN_AUTHENTICATION_USERNAME" Default="" Mode="" Description="The username to use to connect to Jellyfin" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="JELLYFIN_AUTHENTICATION_PASSWORD" Target="JELLYFIN_AUTHENTICATION_PASSWORD" Default="" Mode="" Description="The password to use to connect to Jellyfin" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="ERROR|WARN|LOG|DEBUG|VERBOSE" Mode="" Description="Overrides the default log level. Defaults to LOG. Can be set to DEBUG to search for problems." Type="Variable" Display="always" Required="false" Mask="false">LOG</Config>
+  <Config Name="ALLOW_EVERYONE_FOR_DEFAULT_PERMS" Target="ALLOW_EVERYONE_FOR_DEFAULT_PERMS" Default="false|true" Mode="" Description="Allow everyone to control the bot by default for new servers and users" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="UPDATER_DISABLE_NOTIFICATIONS" Target="UPDATER_DISABLE_NOTIFICATIONS" Default="false|true" Mode="" Description="By default, update notifications will be sent to the Discord server owner. If you do not like this, you can disable these notifications." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 </Container>
