@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/manuel-rw/jellyfin-discord-music-bot/issues</Support>
+  <Support>https://forums.unraid.net/topic/133844-support-manuel-rw-docker-support-thread</Support>
   <Project>https://github.com/manuel-rw/jellyfin-discord-music-bot</Project>
   <Overview>A simple and leightweight Discord Bot, that integrates with your Jellyfin Media server and enables you to listen to your favourite music directly from discord.&#xD;
 Supports Discord commands and easy configuration with environment variables.&#xD;
