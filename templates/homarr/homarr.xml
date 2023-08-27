@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>homarr</Name>
+  <Repository>ghcr.io/ajnart/homarr:latest</Repository>
+  <Registry>https://github.com/ajnart/homarr/pkgs/container/homarr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/C2WTXkzkwK</Support>
+  <Project>https://github.com/ajnart/homarr</Project>
+  <Overview>DESCRIPTION&#xD;
+Homarr is a simple and lightweight homepage for your server, that helps you easily access all of your services in one place.&#xD;
+&#xD;
+Live demo:&#xD;
+https://demo.homarr.dev&#xD;
+&#xD;
+NOTES&#xD;
+&#x2022; The available tags to be used for this image, are: 'latest' (recommended) and 'dev'.&#xD;
+&#x2022; If you want to use your own icons (png/svg), place them in the configured directory of 'Storage (icons)'. Then, call them from Homarr URL field as '/icons/my_icon.ext'.&#xD;
+&#xD;
+VERSION&#xD;
+1.6 (2023-04-16)</Overview>
+  <Category>Tools:Utilities Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:7575]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/homarr/homarr.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/homarr/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1681664107</DateInstalled>
+  <DonateText>Like this project? Please consider to donate:</DonateText>
+  <DonateLink>https://ko-fi.com/manicraft1001</DonateLink>
+  <Requires/>
+  <Config Name="WebUI" Target="7575" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">10004</Config>
+  <Config Name="Storage (icons)" Target="/app/public/icons" Default="" Mode="rw" Description="This is the location for custom icons." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/homarr/icons</Config>
+  <Config Name="Storage (config)" Target="/app/data/configs" Default="" Mode="rw" Description="This is the location for the internal data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/homarr/configs</Config>
+  <Config Name="PORT" Target="PORT" Default="" Mode="" Description="If you need, you can customize the internal port using this variable." Type="Variable" Display="advanced" Required="false" Mask="false">7575</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="" Mode="ro" Description="Gives Homarr the ability to restart, stop, start, refresh and remove containers as well as add them to the dashboard." Type="Path" Display="advanced" Required="false" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="DOCKER_HOST" Target="DOCKER_HOST" Default="" Mode="" Description="Mount docker socket via TCP (eg.: tcp://traefik-docker-socket-proxy:2375)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="DOCKER_PORT" Target="DOCKER_PORT" Default="" Mode="" Description="Mount docker socket via TCP (eg.: tcp://traefik-docker-socket-proxy:2375)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="DEFAULT_COLOR_SCHEME" Target="DEFAULT_COLOR_SCHEME" Default="dark|light" Mode="" Description="The default color scheme for the dashboard." Type="Variable" Display="advanced" Required="false" Mask="false">dark</Config>
+  <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="(Experimental): Will be removed soon - This password will protect the dashboard from unauthorized access." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="DISABLE_EDIT_MODE" Target="DISABLE_EDIT_MODE" Default="false|true" Mode="" Description="(Experimental): Will be removed soon" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="EDIT_MODE_PASSWORD" Target="EDIT_MODE_PASSWORD" Default="" Mode="" Description="(Experimental): Will be removed soon - Set a password for edit mode." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>
