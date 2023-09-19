@@ -29,7 +29,7 @@ VERSION&#xD;
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1681664107</DateInstalled>
-  <DonateText>Like this project? Please consider to donate:</DonateText>
+  <DonateText>Like this template? Please consider to donate:</DonateText>
   <DonateLink>https://ko-fi.com/manicraft1001</DonateLink>
   <Requires/>
   <Config Name="WebUI" Target="7575" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">10004</Config>
