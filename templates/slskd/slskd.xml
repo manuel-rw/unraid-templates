@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>slskd</Name>
+  <Repository>slskd/slskd:latest</Repository>
+  <Registry>https://github.com/slskd/slskd/pkgs/container/slskd</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/133844-support-manuel-rw-docker-support-thread/</Support>
+  <Project>https://github.com/slskd/slskd</Project>
+  <Overview>A modern client-server application for the Soulseek file-sharing network. It is accessible from a web browser and supports reverse proxies.</Overview>
+  <Category>Downloaders: MediaApp:Music Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:5030]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/slskd/slskd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/manuel-rw/jellyfin-discord-music-bot/master/templates/slskd/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1695145449</DateInstalled>
+  <DonateText>Like this project? Please consider to donate:</DonateText>
+  <DonateLink>https://ko-fi.com/manicraft1001</DonateLink>
+  <Requires/>
+  <Config Name="SLSKD_REMOTE_CONFIGURATION" Target="SLSKD_REMOTE_CONFIGURATION" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="HTTP WEB UI" Target="5030" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5030</Config>
+  <Config Name="HTTPS WEB UI" Target="5031" Default="5031" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5031</Config>
+  <Config Name="SOULSEEK CLIENT" Target="50300" Default="50300" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">50300</Config>
+  <Config Name="SLSKD_UPLOAD_SLOTS" Target="SLSKD_UPLOAD_SLOTS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
+  <Config Name="SLSKD_UPLOAD_SPEED_LIMIT" Target="SLSKD_UPLOAD_SPEED_LIMIT" Default="1000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="Soulseek Username" Target="SLSKD_SLSK_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Soulseek Password" Target="SLSKD_SLSK_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="SLSKD_SLSK_DESCRIPTION" Target="SLSKD_SLSK_DESCRIPTION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">A Soulseek user</Config>
+  <Config Name="SLSKD_SLSK_DIAG_LEVEL" Target="SLSKD_SLSK_DIAG_LEVEL" Default="None|Warning|Info|Debug" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">None</Config>
+  <Config Name="Web UI Username" Target="SLSKD_USERNAME" Default="" Mode="" Description="The username for the web UI" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Web UI Password" Target="SLSKD_PASSWORD" Default="" Mode="" Description="The password for the web UI" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Application data" Target="/app" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/slskd/</Config>
+</Container>
