@@ -22,7 +22,7 @@ https://github.com/manuel-rw/jellyfin-discord-music-bot/wiki</Overview>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1673820796</DateInstalled>
-  <DonateText>Like this project? Please consider to donate:</DonateText>
+  <DonateText>Like this template? Please consider to donate:</DonateText>
   <DonateLink>https://ko-fi.com/manicraft1001</DonateLink>
   <Requires/>
   <Config Name="Host Port 1" Target="3000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3000</Config>

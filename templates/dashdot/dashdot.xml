@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>dashdot</Name>
+  <Repository>mauricenino/dashdot:latest</Repository>
+  <Registry>https://hub.docker.com/r/mauricenino/dashdot</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/133844-support-manuel-rw-docker-support-thread/</Support>
+  <Project>https://github.com/MauriceNino/dashdot</Project>
+  <Overview>DESCRIPTION&#xD;
+Dash. (or Dashdot) is a modern server dashboard, developed with a simple, but performant stack and designed with glassmorphism in mind.&#xD;
+&#xD;
+Live demo:&#xD;
+https://dash.mauz.io/&#xD;
+&#xD;
+NOTES&#xD;
+&#x2022; You have other variables available to use, if needed. Check the official docs to know more.&#xD;
+&#x2022; The 'privileged' flag is needed to determine the memory and storage info.&#xD;
+&#x2022; There are two docker image tags available: 'latest' and 'dev'.&#xD;
+&#xD;
+VERSION&#xD;
+1.2 (2023-03-04)</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:3001]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/dashdot/dashdot.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/dashdot/dashdot.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1677946339</DateInstalled>
+  <DonateText>Like this template? Please consider to donate:</DonateText>
+  <DonateLink>https://ko-fi.com/manicraft1001</DonateLink>
+  <Requires/>
+  <Config Name="WebUI" Target="3001" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3001</Config>
+  <Config Name="Storage (host)" Target="/mnt/host" Default="" Mode="ro" Description="For reading the usage stats of all drives, and collect other information from the OS." Type="Path" Display="always" Required="false" Mask="false">/</Config>
+  <Config Name="DASHDOT_SHOW_HOST" Target="DASHDOT_SHOW_HOST" Default="true|false" Mode="" Description="If you want to show the host part in the server widget (e.g. dash. -&amp;gt; dash.mauz.io)." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="DASHDOT_CUSTOM_HOST" Target="DASHDOT_CUSTOM_HOST" Default="" Mode="" Description="If you want to show a custom host in the server widget (needs DASHDOT_SHOW_HOST enabled to work)." Type="Variable" Display="advanced" Required="false" Mask="false">MY SERVER</Config>
+  <Config Name="DASHDOT_ENABLE_CPU_TEMPS" Target="DASHDOT_ENABLE_CPU_TEMPS" Default="false|true" Mode="" Description="If you want to show the CPU temperature in the graph. This will probably not work on a VPS, so you need to try it on your own if this works. For home servers it might work just fine." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="DASHDOT_USE_IMPERIAL" Target="DASHDOT_USE_IMPERIAL" Default="false|true" Mode="" Description="Shows any units in the imperial system, instead of the default metric." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="DASHDOT_ALWAYS_SHOW_PERCENTAGES" Target="DASHDOT_ALWAYS_SHOW_PERCENTAGES" Default="false|true" Mode="" Description="To always show the current percentage of each graph in the top-left corner. Without enabling this, they will only be shown on lower resolution devices (mobile phones)." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="DASHDOT_PAGE_TITLE" Target="DASHDOT_PAGE_TITLE" Default="" Mode="" Description="If you want to show a custom string in the browser page title." Type="Variable" Display="advanced" Required="false" Mask="false">dash.</Config>
+  <Config Name="DASHDOT_WIDGET_LIST" Target="DASHDOT_WIDGET_LIST" Default="" Mode="" Description="The available options are: os, cpu, storage, ram, network, gpu." Type="Variable" Display="advanced" Required="false" Mask="false">os,cpu,storage,ram,network</Config>
+  <Config Name="DASHDOT_OS_LABEL_LIST" Target="DASHDOT_OS_LABEL_LIST" Default="" Mode="" Description="The available options are: os, arch, up_since." Type="Variable" Display="advanced" Required="false" Mask="false">os,arch,up_since</Config>
+  <Config Name="DASHDOT_CPU_LABEL_LIST" Target="DASHDOT_CPU_LABEL_LIST" Default="" Mode="" Description="The available options are: brand, model, cores, threads, frequency." Type="Variable" Display="advanced" Required="false" Mask="false">brand,model,cores,threads,frequency</Config>
+  <Config Name="DASHDOT_STORAGE_LABEL_LIST" Target="DASHDOT_STORAGE_LABEL_LIST" Default="" Mode="" Description="The available options are: brand, size, type." Type="Variable" Display="advanced" Required="false" Mask="false">brand,size,type</Config>
+  <Config Name="DASHDOT_RAM_LABEL_LIST" Target="DASHDOT_RAM_LABEL_LIST" Default="" Mode="" Description="The available options are: brand, size, type, frequency." Type="Variable" Display="advanced" Required="false" Mask="false">brand,size,type,frequency</Config>
+  <Config Name="DASHDOT_NETWORK_LABEL_LIST" Target="DASHDOT_NETWORK_LABEL_LIST" Default="" Mode="" Description="The available options are: type, speed_up, speed_down, interface_speed, public_ip." Type="Variable" Display="advanced" Required="false" Mask="false">type,speed_up,speed_down,interface_speed</Config>
+  <Config Name="DASHDOT_GPU_LABEL_LIST" Target="DASHDOT_GPU_LABEL_LIST" Default="" Mode="" Description="The available options are: brand, model, memory." Type="Variable" Display="advanced" Required="false" Mask="false">brand, model, memory</Config>
+</Container>
