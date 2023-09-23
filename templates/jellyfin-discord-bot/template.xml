@@ -16,8 +16,8 @@ To set up your own instance, please follow the guide:&#xD;
 https://github.com/manuel-rw/jellyfin-discord-music-bot/wiki</Overview>
   <Category>Tools: MediaApp:Music Network:Web Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/jellyfin-discord-bot/jellyfin-discord-bot.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/manuel-rw/jellyfin-discord-music-bot/master/templates/jellyfin-discord-bot/logo.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/jellyfin-discord-bot/template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/jellyfin-discord-bot/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

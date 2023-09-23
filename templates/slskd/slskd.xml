@@ -13,7 +13,7 @@
   <Category>Downloaders: MediaApp:Music Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:5030]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/slskd/slskd.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/manuel-rw/jellyfin-discord-music-bot/master/templates/slskd/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/slskd/logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

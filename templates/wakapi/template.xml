@@ -13,7 +13,7 @@
   <Category>HomeAutomation: Productivity: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:5000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/wakapi/template.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/manuel-rw/jellyfin-discord-music-bot/master/templates/wakapi/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/wakapi/logo.png</Icon>
   <ExtraParams>--user 99:100</ExtraParams>
   <PostArgs/>
   <CPUset/>
