@@ -27,6 +27,7 @@
   <Requires/>
   <Config Name="SLSKD_REMOTE_CONFIGURATION" Target="SLSKD_REMOTE_CONFIGURATION" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="HTTP WEB UI" Target="5030" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5030</Config>
+  <Config Name="Http Web UI Port" Target="PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">5030</Config>
   <Config Name="HTTPS WEB UI" Target="5031" Default="5031" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5031</Config>
   <Config Name="SOULSEEK CLIENT" Target="50300" Default="50300" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">50300</Config>
   <Config Name="SLSKD_UPLOAD_SLOTS" Target="SLSKD_UPLOAD_SLOTS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
