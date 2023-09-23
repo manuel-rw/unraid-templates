@@ -14,7 +14,11 @@
   <WebUI>http://[IP]:[PORT:5030]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/slskd/slskd.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/slskd/logo.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/slskd/screenshots/login.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/slskd/screenshots/search.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/slskd/screenshots/downloads.png</Screenshot>
   <ExtraParams/>
+  <Licence>AGPL-3.0 license</Licence>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1695145449</DateInstalled>
