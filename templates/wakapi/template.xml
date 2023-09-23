@@ -14,6 +14,8 @@
   <WebUI>http://[IP]:[PORT:5000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/wakapi/template.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/wakapi/logo.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/wakapi/screenshots/login.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/wakapi/screenshots/dashboard.png</Screenshot>
   <ExtraParams>--user 99:100</ExtraParams>
   <PostArgs/>
   <CPUset/>
@@ -21,7 +23,20 @@
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Password Salt" Target="WAKAPI_PASSWORD_SALT" Default="" Mode="" Description="Use the following command to generate the  salt:&#13;&#10;&#13;&#10;cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Password Salt" Target="WAKAPI_PASSWORD_SALT" Default="" Mode="" Description="Use the following command to generate the  salt:&#13;&#10;&#13;&#10;cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1" Type="Variable" Display="always" Required="true" Mask="true">eUM6e5ryY70s2RsRFO6l9OkB1</Config>
   <Config Name="Data Path" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wakapi/data</Config>
   <Config Name="HTTP Web UI" Target="3000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="Http Web UI Port" Target="PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">5000</Config>
+  <Config Name="Environment" Target="ENVIRONMENT" Default="dev|prod" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">prod</Config>
+  <Config Name="Allow Signup" Target="WAKAPI_ALLOW_SIGNUP" Default="true|false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Disable Frontpage" Target="WAKAPI_DISABLE_FRONTPAGE" Default="false|true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Prometheus Metrics" Target="WAKAPI_EXPOSE_METRICS" Default="false|true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Mail Enabled" Target="WAKAPI_MAIL_ENABLED" Default="false|true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Mail Sender" Target="WAKAPI_MAIL_SENDER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Wakapi &lt;noreply@wakapi.dev&gt;</Config>
+  <Config Name="Mail Provider" Target="WAKAPI_MAIL_PROVIDER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">smtp</Config>
+  <Config Name="Mail SMTP Host" Target="WAKAPI_MAIL_SMTP_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Mail SMTP Port" Target="WAKAPI_MAIL_SMTP_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Mail SMTP User" Target="WAKAPI_MAIL_SMTP_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Mail SMTP Pasword" Target="WAKAPI_MAIL_SMTP_PASS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Mail SMTP TLS" Target="WAKAPI_MAIL_SMTP_TLS" Default="false|true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 </Container>
