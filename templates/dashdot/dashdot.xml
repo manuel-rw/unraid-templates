@@ -33,8 +33,9 @@ VERSION&#xD;
   <DonateText>Like this template? Please consider to donate:</DonateText>
   <DonateLink>https://ko-fi.com/manicraft1001</DonateLink>
   <Requires/>
-  <Config Name="WebUI" Target="3001" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">3001</Config>
-  <Config Name="Storage (host)" Target="/mnt/host" Default="" Mode="ro" Description="For reading the usage stats of all drives, and collect other information from the OS." Type="Path" Display="always" Required="false" Mask="false">/</Config>
+  <Config Name="WebUI" Target="3001" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3001</Config>
+  <Config Name="Storage (host)" Target="/mnt/host" Default="" Mode="ro" Description="For reading the usage stats of all drives, and collect other information from the OS." Type="Path" Display="always" Required="true" Mask="false">/</Config>
+  <Config Name="Storage (OS information)" Target="/etc/os-release" Default="" Mode="ro" Description="This is the location for the OS release information (unRAID base)." Type="Path" Display="always" Required="true" Mask="false">/etc/os-release</Config>
   <Config Name="DASHDOT_SHOW_HOST" Target="DASHDOT_SHOW_HOST" Default="true|false" Mode="" Description="If you want to show the host part in the server widget (e.g. dash. -&amp;gt; dash.mauz.io)." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
   <Config Name="DASHDOT_CUSTOM_HOST" Target="DASHDOT_CUSTOM_HOST" Default="" Mode="" Description="If you want to show a custom host in the server widget (needs DASHDOT_SHOW_HOST enabled to work)." Type="Variable" Display="advanced" Required="false" Mask="false">MY SERVER</Config>
   <Config Name="DASHDOT_ENABLE_CPU_TEMPS" Target="DASHDOT_ENABLE_CPU_TEMPS" Default="false|true" Mode="" Description="If you want to show the CPU temperature in the graph. This will probably not work on a VPS, so you need to try it on your own if this works. For home servers it might work just fine." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
