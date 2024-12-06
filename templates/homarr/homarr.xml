@@ -43,5 +43,4 @@ VERSION&#xD;
   <Config Name="DEFAULT_COLOR_SCHEME" Target="DEFAULT_COLOR_SCHEME" Default="dark|light" Mode="" Description="The default color scheme for the dashboard." Type="Variable" Display="advanced" Required="false" Mask="false">dark</Config>
   <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="(Experimental): Will be removed soon - This password will protect the dashboard from unauthorized access." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="DISABLE_EDIT_MODE" Target="DISABLE_EDIT_MODE" Default="false|true" Mode="" Description="(Experimental): Will be removed soon" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
-  <Config Name="EDIT_MODE_PASSWORD" Target="EDIT_MODE_PASSWORD" Default="" Mode="" Description="(Experimental): Will be removed soon - Set a password for edit mode." Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
