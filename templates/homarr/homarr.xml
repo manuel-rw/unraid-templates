@@ -165,6 +165,11 @@
     Mode=""
     Description="Attribute used for groups (roles) claim. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
     Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: Name attribute"
+    Target="AUTH_OIDC_NAME_ATTRIBUTE_OVERWRITE" Default=""
+    Mode=""
+    Description="Attribute used for name (preferred_username or name) claim. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
   <Config Name="Database: Driver"
     Target="DB_DRIVER" Default="better-sqlite3|mysql2"
     Mode=""
