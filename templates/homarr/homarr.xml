@@ -1,46 +1,228 @@
 <?xml version="1.0"?>
-<Container version="2">
+<Container
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schemas/container-schema.xsd">
   <Name>homarr</Name>
-  <Repository>ghcr.io/ajnart/homarr:latest</Repository>
-  <Registry>https://github.com/ajnart/homarr/pkgs/container/homarr</Registry>
+  <Repository>ghcr.io/homarr-labs/homarr:latest</Repository>
+  <Registry>https://github.com/homarr-labs/homarr/pkgs/container/homarr</Registry>
   <Network>bridge</Network>
-  <MyIP/>
+  <MyIP />
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://discord.gg/C2WTXkzkwK</Support>
-  <Project>https://github.com/ajnart/homarr</Project>
+  <Support>https://github.com/homarr-labs/homarr/issues?q=is%3Aissue+is%3Aopen</Support>
+  <Project>https://homarr.dev</Project>
   <Overview>DESCRIPTION&#xD;
-Homarr is a simple and lightweight homepage for your server, that helps you easily access all of your services in one place.&#xD;
-&#xD;
-Live demo:&#xD;
-https://demo.homarr.dev&#xD;
-&#xD;
-NOTES&#xD;
-&#x2022; The available tags to be used for this image, are: 'latest' (recommended) and 'dev'.&#xD;
-&#x2022; If you want to use your own icons (png/svg), place them in the configured directory of 'Storage (icons)'. Then, call them from Homarr URL field as '/icons/my_icon.ext'.&#xD;
-&#xD;
-VERSION&#xD;
-1.6 (2023-04-16)</Overview>
+    A sleek, modern dashboard that puts all of your apps and services at your fingertips.
+    Control everything in one convenient location.
+    Seamlessly integrates with the apps you've added, providing you with valuable information.&#xD;
+    &#xD;
+    Live demo:&#xD;
+    https://demo.homarr.dev&#xD;
+    &#xD;
+    NOTES&#xD;
+    &#x2022; We release using semantic releases (https://semver.org/).
+    Consult changelog before updating to major versions.
+    The available tags to be used for this image, are: 'latest' (recommended) and
+    'dev'. Fixed tags (e.g. 1.2.6) are also available.
+  </Overview>
   <Category>Tools:Utilities Network:Other</Category>
   <WebUI>http://[IP]:[PORT:7575]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/homarr/homarr.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/homarr/icon.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1681664107</DateInstalled>
-  <DonateText>Like this template? Please consider to donate:</DonateText>
-  <DonateLink>https://ko-fi.com/manicraft1001</DonateLink>
-  <Requires/>
-  <Config Name="WebUI" Target="7575" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">10004</Config>
-  <Config Name="Storage (icons)" Target="/app/public/icons" Default="" Mode="rw" Description="This is the location for custom icons." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/homarr/icons</Config>
-  <Config Name="Storage (config)" Target="/app/data/configs" Default="" Mode="rw" Description="This is the location for the internal data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/homarr/configs</Config>
-  <Config Name="Storage (data)" Target="/data" Default="" Mode="rw" Description="Main location for storing data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/homarr/data</Config>
-  <Config Name="PORT" Target="PORT" Default="" Mode="" Description="If you need, you can customize the internal port using this variable." Type="Variable" Display="advanced" Required="false" Mask="false">7575</Config>
-  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="" Mode="ro" Description="Gives Homarr the ability to restart, stop, start, refresh and remove containers as well as add them to the dashboard." Type="Path" Display="advanced" Required="false" Mask="false">/var/run/docker.sock</Config>
-  <Config Name="DOCKER_HOST" Target="DOCKER_HOST" Default="" Mode="" Description="Mount docker socket via TCP (eg.: tcp://traefik-docker-socket-proxy:2375)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="DOCKER_PORT" Target="DOCKER_PORT" Default="" Mode="" Description="Mount docker socket via TCP (eg.: tcp://traefik-docker-socket-proxy:2375)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="DEFAULT_COLOR_SCHEME" Target="DEFAULT_COLOR_SCHEME" Default="dark|light" Mode="" Description="The default color scheme for the dashboard." Type="Variable" Display="advanced" Required="false" Mask="false">dark</Config>
-  <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="(Experimental): Will be removed soon - This password will protect the dashboard from unauthorized access." Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="DISABLE_EDIT_MODE" Target="DISABLE_EDIT_MODE" Default="false|true" Mode="" Description="(Experimental): Will be removed soon" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <TemplateURL>
+    https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/homarr/homarr.xml</TemplateURL>
+  <Icon>
+    https://raw.githubusercontent.com/manuel-rw/unraid-templates/master/templates/homarr/icon.png</Icon>
+  <ExtraParams />
+  <PostArgs />
+  <CPUset />
+  <DonateText>Like this template? Please consider to donate to our project, so we can keep working
+    on it:</DonateText>
+  <DonateLink>https://opencollective.com/homarr</DonateLink>
+  <Requires />
+  <Config Name="WebUI" Target="7575" Default="" Mode="tcp"
+    Description="Homarr is running on port 7575 inside the container. Choose the external port for the container. Access Homarr using the external port or forward requests using a reverse proxy."
+    Type="Port" Display="always" Required="false" Mask="false">10004</Config>
+  <Config Name="Storage" Target="/appdata" Default="" Mode="rw"
+    Description="Homarr will write application data into a database and the filesystem. This mount is required to persist data when the container is re-created."
+    Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/homarr/appdata</Config>
+  <Config Name="Secret Encryption Key" Target="SECRET_ENCRYPTION_KEY" Default="" Mode=""
+    Description="Homarr needs API keys, usernames, passwords and other confidential data to access data in your integrations. To safely store this data, we use AES-256-CBC, which prevents third parties from extracting these credentials. For this, you must provide a randomly generated encryption key. Open a shell and copy the output of 'openssl rand -hex 32' to this field."
+    Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="" Mode="ro"
+    Description="Gives Homarr the ability to restart, stop, start, refresh and remove containers as well as add them to the dashboard. Set to read-only actions by default - can be a potential security risk."
+    Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Docker TCP Hosts" Target="DOCKER_HOSTNAMES" Default="" Mode=""
+    Description="Alternative to mounting via path. Comma separated list of hostnames to connect to. Example: localhost,docker.example.com"
+    Type="Variable" Display="always" Required="false" Mask="false" />
+  <Config Name="Docker TCP Host Ports" Target="DOCKER_PORTS" Default="" Mode=""
+    Description="Alternative to mounting via path. Comma separated list of ports to connect to. Must be the same length as DOCKER_HOSTNAMES. Example: 2375,2376"
+    Type="Variable" Display="always" Required="false" Mask="false" />
+  <Config Name="Authentication: Single Sign on authentication providers" Target="AUTH_PROVIDERS"
+    Default="" Mode=""
+    Description="Select Which provider to use between credentials, ldap and oidc. Multiple providers can be enabled with by separating them with commas (ex. 'AUTH_PROVIDERS=credentials,oidc'). It is highly recommended to just enable one provider."
+    Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Authentication: Single Sign on logout redirect URL"
+    Target="AUTH_LOGOUT_REDIRECT_URL" Default=""
+    Mode=""
+    Description="URL to redirect to after clicking logging out. Can be left empty in most cases."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: Single Sign on session expiry time"
+    Target="AUTH_SESSION_EXPIRY_TIME" Default="30d"
+    Mode=""
+    Description="Time for the session to time out. Can be set as pure number, which will automatically be used in seconds, or followed by s, m, h or d for seconds, minutes, hours or days. (ex: '30m')"
+    Required="false" Display="always" Mask="false">30d</Config>
+  <Config Name="Authentication: LDAP server URI"
+    Target="AUTH_LDAP_URI" Default=""
+    Mode=""
+    Description="URI of your LDAP server. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: Base DN of your LDAP server"
+    Target="AUTH_LDAP_BASE" Default=""
+    Mode=""
+    Description="Base DN (aka. distinguished name) of your LDAP server. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: LDAP server bind DN"
+    Target="AUTH_LDAP_BIND_DN" Default=""
+    Mode=""
+    Description="User used for finding users and groups. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: LDAP server bind password"
+    Target="AUTH_LDAP_BIND_PASSWORD" Default=""
+    Mode=""
+    Description="Password for bind user. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="true"></Config>
+  <Config Name="Authentication: LDAP username attribute"
+    Target="AUTH_LDAP_USERNAME_ATTRIBUTE" Default=""
+    Mode=""
+    Description="Attribute used for username. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: LDAP mail attribute"
+    Target="AUTH_LDAP_USER_MAIL_ATTRIBUTE" Default=""
+    Mode=""
+    Description="Attribute used for mail field. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: LDAP group class"
+    Target="AUTH_LDAP_GROUP_CLASS" Default=""
+    Mode=""
+    Description="Class used for querying groups. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: LDAP group member attribute"
+    Target="AUTH_LDAP_GROUP_MEMBER_ATTRIBUTE" Default=""
+    Mode=""
+    Description="Attribute used for querying group member. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: LDAP group member user attribute"
+    Target="AUTH_LDAP_GROUP_MEMBER_USER_ATTRIBUTE" Default=""
+    Mode=""
+    Description="User attribute used for comparing with group member. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: LDAP search scope"
+    Target="AUTH_LDAP_SEARCH_SCOPE" Default=""
+    Mode=""
+    Description="Search scopes between base, one and sub. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: LDAP username extra filter arguments"
+    Target="AUTH_LDAP_USERNAME_FILTER_EXTRA_ARG" Default=""
+    Mode=""
+    Description="Extra arguments for user search filter (and based). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: LDAP group extra filter arguments"
+    Target="AUTH_LDAP_GROUP_FILTER_EXTRA_ARG" Default=""
+    Mode=""
+    Description="Extra arguments for user's groups search filter (and based). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: OIDC issuer URI"
+    Target="AUTH_OIDC_ISSUER" Default=""
+    Mode=""
+    Description="Issuer URI of OIDC provider without trailing slash (/). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: OIDC client ID"
+    Target="AUTH_OIDC_CLIENT_ID" Default=""
+    Mode=""
+    Description="ID of OIDC client (application). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: OIDC client secret"
+    Target="AUTH_OIDC_CLIENT_SECRET" Default=""
+    Mode=""
+    Description="Secret of OIDC client (application). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="true"></Config>
+  <Config Name="Authentication: OIDC client name"
+    Target="AUTH_OIDC_CLIENT_NAME" Default=""
+    Mode=""
+    Description="Display name of provider (in login screen). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: OIDC auto login"
+    Target="AUTH_OIDC_AUTO_LOGIN" Default=""
+    Mode=""
+    Description="Automatically redirect to OIDC login. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: OIDC scope overwrite"
+    Target="AUTH_OIDC_SCOPE_OVERWRITE" Default=""
+    Mode=""
+    Description="Overwrite default scopes (openid, profile, email). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: Groups attribute"
+    Target="AUTH_OIDC_GROUPS_ATTRIBUTE" Default=""
+    Mode=""
+    Description="Attribute used for groups (roles) claim. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Authentication: Name attribute"
+    Target="AUTH_OIDC_NAME_ATTRIBUTE_OVERWRITE" Default=""
+    Mode=""
+    Description="Attribute used for name (preferred_username or name) claim. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Database: Driver"
+    Target="DB_DRIVER" Default="better-sqlite3|mysql2"
+    Mode=""
+    Description="Database driver to use. Currently better-sqlite3 is used for sqlite and mysql2 for mysql. better-sqlite3 is easier to use and requires to additional containers but may not scale as well. Default is 'better-sqlite3'."
+    Required="false" Display="always" Mask="false" Type="Variable">better-sqlite3</Config>
+  <Config Name="Database: Dialect"
+    Target="DB_DIALECT" Default="sqlite|mysql"
+    Mode=""
+    Description="Database dialect to use. Either choose 'sqlite' or 'mysql'. Default is 'sqlite'"
+    Required="false" Display="always" Mask="false" Type="Variable">sqlite</Config>
+  <Config Name="Database: URL"
+    Target="DB_URL" Default=""
+    Mode=""
+    Description="Database URL to connect to. Default is '/appdata/db/db.sqlite'. The URL is a combination of all DB fields below. The URL will be prioritized over the other values if both are present."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Database: Hostname"
+    Target="DB_HOST" Default=""
+    Mode=""
+    Description="Database host to connect to."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Database: Port"
+    Target="DB_PORT" Default=""
+    Mode=""
+    Description="Database port to connect to."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Database: Database Name"
+    Target="DB_NAME" Default=""
+    Mode=""
+    Description="Database name to connect to."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Database: User"
+    Target="DB_USER" Default=""
+    Mode=""
+    Description="Database user to connect with."
+    Required="false" Display="always" Mask="false"></Config>
+  <Config Name="Database: Password"
+    Target="DB_PASSWORD" Default=""
+    Mode=""
+    Description="Database password to connect with."
+    Required="false" Display="always" Mask="true"></Config>
+  <Config Name="Disable automatic database migrations"
+    Target="DB_MIGRATIONS_DISABLED" Default="false|true"
+    Mode=""
+    Description="Disable any automatic database migrations. Can be useful, when you manually migrate your database or if you want to restore data. Only set this to true if you know what you're doing!"
+    Required="true" Display="advanced" Mask="false">false</Config>
+  <Config Name="User ID"
+    Target="PUID" Default=""
+    Mode=""
+    Description="By default, the container is running as root and the application is running as a lower user. Using this variable, you can override the container user - this comes at the cost of some additional complexity. See https://homarr.dev/docs/advanced/running-as-different-user/. Only set this if you know what you're doing!"
+    Required="true" Display="advanced" Mask="false"></Config>
+  <Config Name="Group ID"
+    Target="PGID" Default=""
+    Mode=""
+    Description="By default, the container is running as root and the application is running as a lower user. Using this variable, you can override the container group - this comes at the cost of some additional complexity. See https://homarr.dev/docs/advanced/running-as-different-user/. Only set this if you know what you're doing!"
+    Required="true" Display="advanced" Mask="false"></Config>
 </Container>

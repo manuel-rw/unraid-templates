@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- Root element -->
+  <xs:element name="Container">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Name" type="xs:string" />
+        <xs:element name="Repository" type="xs:string" />
+        <xs:element name="Registry" type="xs:string" minOccurs="0" />
+        <xs:element name="Network" type="xs:string" />
+        <xs:element name="MyIP" type="xs:string" minOccurs="0" />
+        <xs:element name="Shell" type="xs:string" />
+        <xs:element name="Privileged" type="xs:boolean" />
+        <xs:element name="Support" type="xs:string" minOccurs="0" />
+        <xs:element name="Project" type="xs:string" minOccurs="0" />
+        <xs:choice>
+          <xs:element name="Description" type="xs:string" minOccurs="0" />
+          <xs:element name="Overview" type="xs:string" minOccurs="0" />
+        </xs:choice>
+        <xs:element name="Category" type="xs:string" minOccurs="0" />
+        <xs:element name="WebUI" type="xs:string" minOccurs="0" />
+        <xs:element name="TemplateURL" type="xs:string" minOccurs="0" />
+        <xs:element name="Icon" type="xs:string" minOccurs="0" />
+        <xs:element name="ExtraParams" type="xs:string" minOccurs="0" />
+        <xs:element name="PostArgs" type="xs:string" minOccurs="0" />
+        <xs:element name="CPUset" type="xs:string" minOccurs="0" />
+        <xs:element name="DonateText" type="xs:string" minOccurs="0" />
+        <xs:element name="DonateLink" type="xs:string" minOccurs="0" />
+        <xs:element name="Requires" type="xs:string" minOccurs="0" />
+        <xs:element name="Config" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="Name" type="xs:string" use="required" />
+                <xs:attribute name="Target" type="xs:string" use="required" />
+                <xs:attribute name="Default" type="xs:string" use="optional" />
+                <xs:attribute name="Mode" type="xs:string" use="optional" />
+                <xs:attribute name="Description" type="xs:string" use="required" />
+                <xs:attribute name="Type">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="Port" />
+                      <xs:enumeration value="Path" />
+                      <xs:enumeration value="Variable" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="Display" type="xs:string" use="optional" />
+                <xs:attribute name="Required" type="xs:boolean" use="optional" />
+                <xs:attribute name="Mask" type="xs:boolean" use="optional" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
