@@ -219,10 +219,10 @@
     Target="PUID" Default=""
     Mode=""
     Description="By default, the container is running as root and the application is running as a lower user. Using this variable, you can override the container user - this comes at the cost of some additional complexity. See https://homarr.dev/docs/advanced/running-as-different-user/. Only set this if you know what you're doing!"
-    Required="true" Display="advanced" Mask="false"></Config>
+    Required="false" Display="advanced" Mask="false"></Config>
   <Config Name="Group ID"
     Target="PGID" Default=""
     Mode=""
     Description="By default, the container is running as root and the application is running as a lower user. Using this variable, you can override the container group - this comes at the cost of some additional complexity. See https://homarr.dev/docs/advanced/running-as-different-user/. Only set this if you know what you're doing!"
-    Required="true" Display="advanced" Mask="false"></Config>
+    Required="false" Display="advanced" Mask="false"></Config>
 </Container>
