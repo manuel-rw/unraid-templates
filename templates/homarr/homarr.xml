@@ -53,7 +53,7 @@
   <Config Name="Docker TCP Hosts" Target="DOCKER_HOSTNAMES" Default="" Mode=""
     Description="Alternative to mounting via path. Comma separated list of hostnames to connect to. Example: localhost,docker.example.com"
     Type="Variable" Display="always" Required="false" Mask="false" />
-  <Config Name="Docker TCP Host Ports" Target="DOCKER_PORTS" Default="" Mode=""
+  <Config Name="Docker TCP Host Ports" Target="DOCKER_PORTS" Default="credentials" Mode=""
     Description="Alternative to mounting via path. Comma separated list of ports to connect to. Must be the same length as DOCKER_HOSTNAMES. Example: 2375,2376"
     Type="Variable" Display="always" Required="false" Mask="false" />
   <Config Name="Authentication: Single Sign on authentication providers" Target="AUTH_PROVIDERS"
