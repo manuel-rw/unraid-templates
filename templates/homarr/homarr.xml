@@ -57,7 +57,7 @@
     Description="Alternative to mounting via path. Comma separated list of ports to connect to. Must be the same length as DOCKER_HOSTNAMES. Example: 2375,2376"
     Type="Variable" Display="always" Required="false" Mask="false" />
   <Config Name="Authentication: Single Sign on authentication providers" Target="AUTH_PROVIDERS"
-    Default="" Mode=""
+    Default="credentials" Mode=""
     Description="Select Which provider to use between credentials, ldap and oidc. Multiple providers can be enabled with by separating them with commas (ex. 'AUTH_PROVIDERS=credentials,oidc'). It is highly recommended to just enable one provider."
     Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Authentication: Single Sign on logout redirect URL"
