@@ -64,112 +64,112 @@
     Target="AUTH_LOGOUT_REDIRECT_URL" Default=""
     Mode=""
     Description="URL to redirect to after clicking logging out. Can be left empty in most cases."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: Single Sign on session expiry time"
     Target="AUTH_SESSION_EXPIRY_TIME" Default="30d"
     Mode=""
     Description="Time for the session to time out. Can be set as pure number, which will automatically be used in seconds, or followed by s, m, h or d for seconds, minutes, hours or days. (ex: '30m')"
-    Required="false" Display="always" Mask="false">30d</Config>
+    Type="Variable" Required="false" Display="always" Mask="false">30d</Config>
   <Config Name="Authentication: LDAP server URI"
     Target="AUTH_LDAP_URI" Default=""
     Mode=""
     Description="URI of your LDAP server. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: Base DN of your LDAP server"
     Target="AUTH_LDAP_BASE" Default=""
     Mode=""
     Description="Base DN (aka. distinguished name) of your LDAP server. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: LDAP server bind DN"
     Target="AUTH_LDAP_BIND_DN" Default=""
     Mode=""
     Description="User used for finding users and groups. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: LDAP server bind password"
     Target="AUTH_LDAP_BIND_PASSWORD" Default=""
     Mode=""
     Description="Password for bind user. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="true"></Config>
+    Type="Variable" Required="false" Display="always" Mask="true"></Config>
   <Config Name="Authentication: LDAP username attribute"
     Target="AUTH_LDAP_USERNAME_ATTRIBUTE" Default=""
     Mode=""
     Description="Attribute used for username. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: LDAP mail attribute"
     Target="AUTH_LDAP_USER_MAIL_ATTRIBUTE" Default=""
     Mode=""
     Description="Attribute used for mail field. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: LDAP group class"
     Target="AUTH_LDAP_GROUP_CLASS" Default=""
     Mode=""
     Description="Class used for querying groups. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: LDAP group member attribute"
     Target="AUTH_LDAP_GROUP_MEMBER_ATTRIBUTE" Default=""
     Mode=""
     Description="Attribute used for querying group member. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: LDAP group member user attribute"
     Target="AUTH_LDAP_GROUP_MEMBER_USER_ATTRIBUTE" Default=""
     Mode=""
     Description="User attribute used for comparing with group member. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: LDAP search scope"
     Target="AUTH_LDAP_SEARCH_SCOPE" Default=""
     Mode=""
     Description="Search scopes between base, one and sub. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: LDAP username extra filter arguments"
     Target="AUTH_LDAP_USERNAME_FILTER_EXTRA_ARG" Default=""
     Mode=""
     Description="Extra arguments for user search filter (and based). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: LDAP group extra filter arguments"
     Target="AUTH_LDAP_GROUP_FILTER_EXTRA_ARG" Default=""
     Mode=""
     Description="Extra arguments for user's groups search filter (and based). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: OIDC issuer URI"
     Target="AUTH_OIDC_ISSUER" Default=""
     Mode=""
     Description="Issuer URI of OIDC provider without trailing slash (/). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: OIDC client ID"
     Target="AUTH_OIDC_CLIENT_ID" Default=""
     Mode=""
     Description="ID of OIDC client (application). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: OIDC client secret"
     Target="AUTH_OIDC_CLIENT_SECRET" Default=""
     Mode=""
     Description="Secret of OIDC client (application). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="true"></Config>
+    Type="Variable" Required="false" Display="always" Mask="true"></Config>
   <Config Name="Authentication: OIDC client name"
     Target="AUTH_OIDC_CLIENT_NAME" Default=""
     Mode=""
     Description="Display name of provider (in login screen). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: OIDC auto login"
     Target="AUTH_OIDC_AUTO_LOGIN" Default=""
     Mode=""
     Description="Automatically redirect to OIDC login. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: OIDC scope overwrite"
     Target="AUTH_OIDC_SCOPE_OVERWRITE" Default=""
     Mode=""
     Description="Overwrite default scopes (openid, profile, email). See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: Groups attribute"
     Target="AUTH_OIDC_GROUPS_ATTRIBUTE" Default=""
     Mode=""
     Description="Attribute used for groups (roles) claim. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Authentication: Name attribute"
     Target="AUTH_OIDC_NAME_ATTRIBUTE_OVERWRITE" Default=""
     Mode=""
     Description="Attribute used for name (preferred_username or name) claim. See https://homarr.dev/docs/advanced/single-sign-on/ for more information."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Database: Driver"
     Target="DB_DRIVER" Default="better-sqlite3|mysql2"
     Mode=""
@@ -184,45 +184,45 @@
     Target="DB_URL" Default=""
     Mode=""
     Description="Database URL to connect to. Default is '/appdata/db/db.sqlite'. The URL is a combination of all DB fields below. The URL will be prioritized over the other values if both are present."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Database: Hostname"
     Target="DB_HOST" Default=""
     Mode=""
     Description="Database host to connect to."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Database: Port"
     Target="DB_PORT" Default=""
     Mode=""
     Description="Database port to connect to."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Database: Database Name"
     Target="DB_NAME" Default=""
     Mode=""
     Description="Database name to connect to."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Database: User"
     Target="DB_USER" Default=""
     Mode=""
     Description="Database user to connect with."
-    Required="false" Display="always" Mask="false"></Config>
+    Type="Variable" Required="false" Display="always" Mask="false"></Config>
   <Config Name="Database: Password"
     Target="DB_PASSWORD" Default=""
     Mode=""
     Description="Database password to connect with."
-    Required="false" Display="always" Mask="true"></Config>
+    Type="Variable" Required="false" Display="always" Mask="true"></Config>
   <Config Name="Disable automatic database migrations"
     Target="DB_MIGRATIONS_DISABLED" Default="false|true"
     Mode=""
     Description="Disable any automatic database migrations. Can be useful, when you manually migrate your database or if you want to restore data. Only set this to true if you know what you're doing!"
-    Required="true" Display="advanced" Mask="false">false</Config>
+    Type="Variable" Required="true" Display="advanced" Mask="false">false</Config>
   <Config Name="User ID"
     Target="PUID" Default=""
     Mode=""
     Description="By default, the container is running as root and the application is running as a lower user. Using this variable, you can override the container user - this comes at the cost of some additional complexity. See https://homarr.dev/docs/advanced/running-as-different-user/. Only set this if you know what you're doing!"
-    Required="false" Display="advanced" Mask="false"></Config>
+    Type="Variable" Required="false" Display="advanced" Mask="false"></Config>
   <Config Name="Group ID"
     Target="PGID" Default=""
     Mode=""
     Description="By default, the container is running as root and the application is running as a lower user. Using this variable, you can override the container group - this comes at the cost of some additional complexity. See https://homarr.dev/docs/advanced/running-as-different-user/. Only set this if you know what you're doing!"
-    Required="false" Display="advanced" Mask="false"></Config>
+    Type="Variable" Required="false" Display="advanced" Mask="false"></Config>
 </Container>
